@@ -4,8 +4,9 @@
   "description": "Synchronize Redux stores via message passing",
   "main": "lib/index.js",
   "scripts": {
-    "build": "webpack",
-    "lint": "./node_modules/.bin/standard src",
+    "build": "babel -d lib -s true src/",
+    "watch": "babel -d lib -s true -w src/",
+    "lint": "standard src && echo 'No linting errors'",
     "prepublish": "npm run build",
     "build-example": "cd example && webpack -c ./webpack.config.js"
   },
@@ -19,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.5.2",
+    "babel-cli": "^6.6.5",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",

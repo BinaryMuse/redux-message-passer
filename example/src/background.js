@@ -1,6 +1,6 @@
 import { compose, createStore, applyMiddleware } from 'redux'
 
-import { bridges, messagePasserServer } from '../../src/'
+import { bridges, messagePasserServer } from '../../'
 
 const bridge = bridges.chrome.server('nft_redux_mp')
 

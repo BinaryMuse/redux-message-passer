@@ -1,7 +1,7 @@
 import { compose, createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
-import { bridges, messagePasserClient } from '../../src/'
+import { bridges, messagePasserClient } from '../../'
 
 const log = (t) => {
   const el = document.createElement('div')

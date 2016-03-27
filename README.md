@@ -107,7 +107,7 @@ Example
 
 To run the example Chrome extension:
 
-1. Install all deps with `npm install`
+1. Install all deps with `npm install` (this will also build the library with `npm run build`)
 2. Build the extension with `npm run build-example`
 3. Open `chrome://extensions` in your browser
 4. Ensure "Developer mode" is checked
