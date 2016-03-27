@@ -60,22 +60,24 @@ Imagine you have a Chrome extension with a background script and two content scr
 `background.js`:
 
 ```javascript
+const bridge = bridges.chrome.server('chrome_channel_name')
+
 const serverStore = createStore(
   reducer,
   initialState,
-  messagePasserServer()
+  messagePasserServer(bridge)
 )
 ```
 
 `client1.js` (and other content scripts):
 
 ```javascript
-const { send, subscribe } = createChromeBridge('chrome_channel_name')
+const bridge = bridges.chrome.client('chrome_channel_name')
 
 const clientStore = createStore(
   reducer,
   initialState,
-  messagePasserClient(send, subscribe)
+  messagePasserClient(bridge)
 )
 ```
 
