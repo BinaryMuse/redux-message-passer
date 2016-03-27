@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "redux-message-passer",
+  "version": "0.0.0",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_title": "Redux MP",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["lib/background-bundle.js"]
+  }
+}
